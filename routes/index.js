@@ -1,4 +1,4 @@
-async function routes(fastify, options) {
+module.exports = async function (fastify, options) {
   const collection = fastify.mongo.db.collection('tips');
 
   fastify.get('/', async (request, reply) => ({ root: true }));
@@ -10,6 +10,4 @@ async function routes(fastify, options) {
     }
     return result;
   });
-}
-
-module.exports = routes;
+};
