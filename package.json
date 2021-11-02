@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "_test": "tap test/**/*.test.js",
-    "_start": "fastify start -l info app.js",
-    "_dev": "fastify start -w -l info -P app.js",
-    "dev": "nodemon server"
+    "_start": "fastify start -l info server.js",
+    "_dev": "fastify start -w -l info -P server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
