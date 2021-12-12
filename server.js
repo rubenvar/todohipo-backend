@@ -4,10 +4,14 @@ const fastify = require('fastify')({ logger: true });
 fastify.register(require('./lib/db'));
 fastify.register(require('./routes'));
 
-fastify.listen(process.env.PORT, (err, address) => {
-  if (err) {
+const start = async () => {
+  try {
+    await fastify.listen(process.env.PORT);
+  } catch (err) {
     fastify.log.error(err);
     process.exit(1);
   }
-  // Server is now listening on ${address}
-});
+}
+
+start();
+// Server is now listening on ${address}
