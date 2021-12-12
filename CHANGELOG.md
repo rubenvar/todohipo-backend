@@ -4,6 +4,11 @@ All the notable changes made to the [todohipo](https://todohipo.com) project **b
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-12-12
+
+- Migrate evetything to fastify.
+- Simplify the backend (for now just return a list of tip, mutations to come)
+
 ## [1.1.0] - 2020-05-01
 
 ### Added
